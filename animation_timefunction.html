@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title></title>
+    <style type="text/css">
+        .box-container{
+            width: 1500px;
+            height: 200px;
+            border: 2px black solid;
+            margin: auto;
+            position: relative;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background: red;
+            position:absolute;
+            top: 0px;
+            left:0px;
+            animation-name: box;
+            animation-duration: 5s;
+            animation-delay: 0s;
+            animation-timing-function:ease-in-out;
+            
+            /*
+            animation-iteration-count: infinite;
+            animation-iteration-count: 2;
+            */
+        }
+        @keyframes box{
+            from{
+                left:0px;
+            }
+            to{
+                left:400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box-container">
+        <div class="box">
+         <h2>sanjeet</h2>
+        </div>
+    </div>
+    
+</body>
+</html>
