@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Toggle Button</title>
+    <style>
+        #button2 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="Showbtn">Show</button>
+    <button id="hidebtn">hide</button>
+    <button id="toggleButton">Toggle Button</button>
+    <script>
+        const button1 = document.getElementById('button1');
+        const button2 = document.getElementById('button2');
+        const toggleButton = document.getElementById('toggleButton');
+        button2.style.display = 'none';
+        toggleButton.addEventListener('click', function() {
+            if (button1.style.display === 'none') {
+                button1.style.display = 'block';
+                button2.style.display = 'none';
+            } else {
+                button1.style.display = 'none';
+                button2.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
