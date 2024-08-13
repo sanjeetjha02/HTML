@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+</head>
+<body>
+    <h2>Contact Us</h2>
+    <form action="submit_form.php" method="post" onsubmit="return validateForm()">
+        <fieldset>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><br>
+
+        <label for="interests">Interests:</label><br>
+        <input type="checkbox" id="coding" name="interests" value="coding" required>
+
+        <label for="coding">Coding</label>
+        <input type="checkbox" id="reading" name="interests" value="reading" required>
+        
+        <label for="reading">Reading</label><br>
+        
+        <input type="submit" value="Submit">
+    </fieldset>
+    </form>
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var interests = document.querySelectorAll('input[name="interests"]:checked');
+
+            if (!name || !email || !password || !gender || interests.length === 0) {
+                alert("Please fill out all fields.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
