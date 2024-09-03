@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper{
+      width: 1000px;
+      margin: auto;
+      border: 1px solid black;
+    }
+    .wrapper> h1{
+      text-align: center;
+      font-size: 50px;
+    }
+    .inner{
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      padding-top: 20px;
+    }
+    .card{
+      width: 24%;
+      border: 1px solid;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 10px;
+      background: black;
+    }
+    .card img{
+      width: 100%
+    }
+    .title{
+      padding: 10px;
+      text-align: center;
+      font-size: 22px;
+      color: white;
+      background: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>images</h1>
+    <div class="inner">
+      <div class="card">
+        <div class="img">
+          <img src="drone.jpeg">
+        </div>
+        <div class="title">
+          <p>
+            jysygfusdgfubfyg hfuygs fhsfgyg
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+  const url= "https://jsonplaceholder.typicode.com/photos";
+  const inner=document.querySelector('.inner');
+  const fetchData = async()=>{
+    const responce = await fetch(url);
+    let data = await responce.json();
+    console.log(data[0]);
+    let cards='';
+    data.forEach((cardItem)=>{
+      
+          
+    })
+  }
+</script>
+</html>
